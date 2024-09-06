@@ -5,6 +5,16 @@ Brain::Brain()
     std::cout << "Brain default constructor called" << std::endl;
 }
 
+Brain::Brain(std::string idea)
+{
+    std::cout << "Brain constructor called" << std::endl;
+    for (int i = 0; i < 100; i++)
+    {
+        this->ideas[i] = idea;
+        //std::cout << this->ideas[i] << std::endl;
+    }
+}
+
 Brain::Brain(const Brain& obj)
 {
     std::cout << "Brain copy constructor called" << std::endl;
@@ -24,11 +34,11 @@ Brain& Brain::operator=(const Brain& obj)
     return (*this);
 }
 
-void    Brain::build_brain(std::string idea)
-{
-    for (int i = 0; i < 100; i++)
-        this->ideas[i] = idea;
-}
+// void    Brain::build_brain(std::string idea)
+// {
+//     for (int i = 0; i < 100; i++)
+//         this->ideas[i] = idea;
+// }
 
 std::string *Brain::get_ideas()
 {

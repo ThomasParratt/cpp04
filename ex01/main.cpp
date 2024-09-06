@@ -32,18 +32,22 @@ int main(void)
         
     }
     for (int i = 0; i < 10; i++)
-    {
         delete animals[i];
-    }
-
-    Cat   c;
-    c.print_ideas();
-    c.set_ideas("Let's go fishing!");
-    c.print_ideas();
-    c.set_ideas("Let's sleep now");
-    c.print_ideas();
-    // need to implement these for dog
-
-    Animal  animal;
-    animal.makeSound();
 }
+
+// int main(void)
+// {
+//     const Animal* j = new Dog();
+//     const Animal* i = new Cat();
+//     delete j;//should not create a leak
+//     delete i;
+//     return (0);
+// }
+
+// int main(void)
+// {
+//     Dog basic;
+//     {
+//     Dog temp = basic;
+//     }
+// }
