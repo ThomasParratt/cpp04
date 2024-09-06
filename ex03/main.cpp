@@ -46,9 +46,11 @@ int main(void)
     materia_3->use(Tom);
 
     Tom.equip(materia_1);
-    std::cout << "Tom slot 1 = " << Tom.get_slot(1) << std::endl;
+    std::cout << "Tom slot 0 = " << Tom.get_slot(0) << std::endl;
     Tom.equip(materia_2);
+    std::cout << "Tom slot 1 = " << Tom.get_slot(1) << std::endl;
     Tom.equip(materia_3);
+    std::cout << "Tom slot 2 = " << Tom.get_slot(2) << std::endl;
 
     delete materia_1;
     delete materia_2;

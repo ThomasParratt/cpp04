@@ -37,16 +37,19 @@ std::string const & Character::getName() const
 
 void Character::equip(AMateria* m)
 {
-    for (int i = 1; i < 4; i++)
+    for (int i = 0; i < 3; i++)
     {
         if (!this->slot[i])
+        {
             this->slot[i] = m;
+            break ;
+        }
     }  
 }
 
 void Character::unequip(int idx)
 {
-    for (int i = 1; i < 4; i++)
+    for (int i = 0; i < 3; i++)
     {
         if (i == idx)
             this->slot[i] = NULL;
@@ -55,7 +58,7 @@ void Character::unequip(int idx)
 
 void Character::use(int idx, ICharacter& target)
 {
-    for (int i = 1; i < 4; i++)
+    for (int i = 0; i < 3; i++)
     {
         if (i == idx)
             target.use(idx, target);
