@@ -36,14 +36,6 @@ int main(void)
         delete animals[i];
     }
 
-    Cat   c;
-    c.print_ideas();
-    c.set_ideas("Let's go fishing!");
-    c.print_ideas();
-    c.set_ideas("Let's sleep now");
-    c.print_ideas();
-    // need to implement these for dog
-
-    Animal  *animal;
-    //Animal  animal;
+    //Animal  *animal;
+    Animal  animal();
 }
