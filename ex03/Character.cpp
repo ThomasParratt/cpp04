@@ -61,3 +61,7 @@ void Character::use(int idx, ICharacter& target)
             target.use(idx, target);
     }  
 }
+std::string    Character::get_slot(int idx)
+{
+    return (this->slot[idx]->getType());
+}

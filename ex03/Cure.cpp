@@ -21,7 +21,7 @@ Cure&    Cure::operator=(const Cure& obj)
 {
     std::cout << "Cure copy assignment operator called" << std::endl;
     if (this != &obj)
-        this->type = obj.type;
+        this->type = obj.type; // doesn't make sense?
     return (*this);
 }
 
