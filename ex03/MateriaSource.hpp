@@ -7,6 +7,8 @@
 
 class MateriaSource : public IMateriaSource
 {
+    private:
+        AMateria    *copy[4];
     public:
         ~MateriaSource() {}
         void learnMateria(AMateria* materia);

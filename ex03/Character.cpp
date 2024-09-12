@@ -61,10 +61,13 @@ void Character::use(int idx, ICharacter& target)
     for (int i = 0; i < 3; i++)
     {
         if (i == idx)
-            target.use(idx, target);
+            this->slot[idx]->use(target);
     }  
 }
-std::string    Character::get_slot(int idx)
+void    Character::print_slot(int idx)
 {
-    return (this->slot[idx]->getType());
+    if (this->slot[idx] == NULL)
+        std::cout << "slot " << idx << " is not equiped" << std::endl;
+    else
+        std::cout << "slot " << idx << " is " << this->slot[idx]->getType() << std::endl;
 }

@@ -1,6 +1,6 @@
 NAME		=	interface
 
-SRC			=	AMateria.cpp Cure.cpp Ice.cpp Character.cpp main.cpp
+SRC			=	AMateria.cpp Cure.cpp Ice.cpp Character.cpp MateriaSource.cpp main.cpp
 
 CC			=	c++
 
