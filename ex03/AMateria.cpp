@@ -21,11 +21,11 @@ AMateria::~AMateria()
     std::cout << "AMateria destructor called" << std::endl;
 }
 
-AMateria& AMateria::operator=(const AMateria& obj)
-{
-    std::cout << "AMateria copy assignment operator called" << std::endl;
-    return (*this);
-}
+// AMateria& AMateria::operator=(const AMateria& obj)
+// {
+//     std::cout << "AMateria copy assignment operator called" << std::endl;
+//     return (*this);
+// }
 
 std::string const & AMateria::getType() const
 {

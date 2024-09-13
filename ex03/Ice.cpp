@@ -17,11 +17,11 @@ Ice::~Ice()
     std::cout << "Ice destructor called" << std::endl;
 }
 
-Ice&    Ice::operator=(const Ice& obj)
-{
-    std::cout << "Ice copy assignment operator called" << std::endl;
-    return (*this);
-}
+// Ice&    Ice::operator=(const Ice& obj)
+// {
+//     std::cout << "Ice copy assignment operator called" << std::endl;
+//     return (*this);
+// }
 
 Ice*    Ice::clone() const
 {
