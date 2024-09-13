@@ -3,20 +3,18 @@
 MateriaSource::MateriaSource()
 {
     std::cout << "MateriaSource default constructor called" << std::endl;
+    for (int i = 0; i < 4; i++)
+        this->copy[i] = NULL;
 }
 
 MateriaSource::~MateriaSource()
 {
     std::cout << "MateriaSource destructor called" << std::endl;
-    // for (int i = 0; i < 4; i++)
-    // {
-    //     if (this->copy[i])
-    //     {
-    //         delete this->copy[i];
-    //     }
-    // }  
-    // OR
-    //delete[] *this->copy;
+    for (int i = 0; i < 4; i++)
+    {
+        if (this->copy[i])
+            delete this->copy[i];
+    }  
 }
 
 void MateriaSource::learnMateria(AMateria* materia)
@@ -29,7 +27,6 @@ void MateriaSource::learnMateria(AMateria* materia)
             break ;
         }
     }
-    //delete materia; // this cause illegal hardware instruction
 }
         
 AMateria* MateriaSource::createMateria(std::string const & type)
@@ -38,7 +35,6 @@ AMateria* MateriaSource::createMateria(std::string const & type)
     {
         if (this->copy[i]->getType() == type)
         {
-            //this->copy[i] = this->copy[i]->clone(); // is this needed?
             return (this->copy[i]->clone());
             break ;
         }

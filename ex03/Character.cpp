@@ -8,6 +8,10 @@ Character::Character()
 Character::Character(std::string name) : name(name)
 {
     std::cout << "Character constructor called" << std::endl;
+    for (int i = 0; i < 4; i++)
+    {
+        this->slot[i] = NULL;
+    }
 }
 
 Character::Character(const Character& obj)

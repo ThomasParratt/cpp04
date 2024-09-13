@@ -15,7 +15,6 @@ Ice::Ice(const Ice& obj) : AMateria(obj)
 Ice::~Ice()
 {
     std::cout << "Ice destructor called" << std::endl;
-    //delete this;
 }
 
 Ice&    Ice::operator=(const Ice& obj)
