@@ -20,7 +20,7 @@ void MateriaSource::learnMateria(AMateria* materia)
     {
         if (!this->copy[i])
         {
-            this->copy[i] = materia; // change this to clone?
+            this->copy[i] = materia;
             break ;
         }
     }
