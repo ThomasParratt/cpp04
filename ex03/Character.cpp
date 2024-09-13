@@ -17,7 +17,13 @@ Character::Character(std::string name) : name(name)
 Character::Character(const Character& obj)
 {
     std::cout << "Character copy constructor called" << std::endl;
-    this->name = obj.name;
+    for (int i = 0; i < 4; i++)
+    {
+        if (obj.slot[i])
+        {
+            this->slot[i] = obj.slot[i]->clone();
+        }
+    } 
 }
 
 Character::~Character()
@@ -33,9 +39,16 @@ Character::~Character()
 Character&    Character::operator=(const Character& obj)
 {
     std::cout << "Character copy assignment operator called" << std::endl;
-    this->name = obj.name;
     if (this != &obj)
-        this->name = obj.name;
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            if (obj.slot[i])
+            {
+                this->slot[i] = obj.slot[i]->clone();
+            }
+        } 
+    }
     return (*this);
 }
 
