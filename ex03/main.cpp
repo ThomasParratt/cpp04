@@ -25,6 +25,9 @@ int main(void)
     me->use(0, *bob);
     me->use(1, *bob);
 
+    me->unequip(0);  //this will cause leaks
+    me->unequip(1);
+
     delete bob;
     delete me;
     delete src;
