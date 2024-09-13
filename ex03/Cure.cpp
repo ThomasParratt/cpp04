@@ -15,6 +15,7 @@ Cure::Cure(const Cure& obj) : AMateria(obj)
 Cure::~Cure()
 {
     std::cout << "Cure destructor called" << std::endl;
+    //delete this;
 }
 
 Cure&    Cure::operator=(const Cure& obj)
