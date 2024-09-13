@@ -1,5 +1,10 @@
 #include "MateriaSource.hpp"
 
+MateriaSource::MateriaSource()
+{
+    std::cout << "MateriaSource default constructor called" << std::endl;
+}
+
 MateriaSource::~MateriaSource()
 {
     std::cout << "MateriaSource destructor called" << std::endl;
