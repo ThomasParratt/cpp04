@@ -19,6 +19,11 @@ Character::Character(const Character& obj)
 Character::~Character()
 {
     std::cout << "Character destructor called" << std::endl;
+    for (int i = 0; i < 4; i++)
+    {
+        if (this->slot[i])
+            delete this->slot[i];
+    }
 }
 
 Character&    Character::operator=(const Character& obj)
