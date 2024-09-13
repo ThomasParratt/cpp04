@@ -19,14 +19,11 @@ AMateria::AMateria(const AMateria& obj)
 AMateria::~AMateria()
 {
     std::cout << "AMateria destructor called" << std::endl;
-    //delete this;
 }
 
 AMateria& AMateria::operator=(const AMateria& obj)
 {
     std::cout << "AMateria copy assignment operator called" << std::endl;
-    if (this != &obj)
-        *this = obj;
     return (*this);
 }
 
