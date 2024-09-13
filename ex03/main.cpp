@@ -28,9 +28,8 @@ int main(void)
     delete bob;
     delete me;
     delete src;
-    //should tmp be deleted?
 
-    return (0); //LEAKS
+    return (0);
 }
 
 // int main(void)

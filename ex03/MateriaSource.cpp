@@ -38,8 +38,8 @@ AMateria* MateriaSource::createMateria(std::string const & type)
     {
         if (this->copy[i]->getType() == type)
         {
-            this->copy[i] = this->copy[i]->clone(); // is this needed?
-            return (this->copy[i]);
+            //this->copy[i] = this->copy[i]->clone(); // is this needed?
+            return (this->copy[i]->clone());
             break ;
         }
     }  
