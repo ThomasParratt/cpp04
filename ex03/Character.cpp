@@ -3,6 +3,11 @@
 Character::Character() : name("default")
 {
     std::cout << "Character default constructor called" << std::endl;
+    for (int i = 0; i < 4; i++)
+    {
+        this->slot[i] = NULL;
+        this->floor[i] = NULL;
+    }
 }
 
 Character::Character(std::string name) : name(name)
