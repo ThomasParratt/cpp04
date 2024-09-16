@@ -41,6 +41,7 @@ AMateria* MateriaSource::createMateria(std::string const & type)
                 break ;
             }
         }
-    }  
+    }
+    std::cout << "Materia type unknown" << std::endl;
     return (0);
 }
