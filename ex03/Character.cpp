@@ -5,8 +5,8 @@ Character::Character() : name("default")
     std::cout << "Character default constructor called" << std::endl;
     for (int i = 0; i < 4; i++)
     {
-        this->slot[i] = NULL;
-        this->floor[i] = NULL;
+        this->slot[i] = nullptr;
+        this->floor[i] = nullptr;
     }
 }
 
@@ -15,8 +15,8 @@ Character::Character(std::string name) : name(name)
     std::cout << "Character constructor called" << std::endl;
     for (int i = 0; i < 4; i++)
     {
-        this->slot[i] = NULL;
-        this->floor[i] = NULL;
+        this->slot[i] = nullptr;
+        this->floor[i] = nullptr;
     }
 }
 
@@ -29,11 +29,11 @@ Character::Character(const Character& obj)
         if (obj.slot[i])
             this->slot[i] = obj.slot[i]->clone();
         else
-            this->slot[i] = NULL;
+            this->slot[i] = nullptr;
         if (obj.floor[i])
             this->floor[i] = obj.floor[i]->clone();
         else
-            this->floor[i] = NULL;
+            this->floor[i] = nullptr;
     } 
 }
 
@@ -91,7 +91,7 @@ void Character::unequip(int idx)
         if (i == idx)
         {
             this->floor[i] = this->slot[i];
-            this->slot[i] = NULL;
+            this->slot[i] = nullptr;
         }
     }  
 }

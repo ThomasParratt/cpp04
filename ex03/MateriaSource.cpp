@@ -4,7 +4,7 @@ MateriaSource::MateriaSource()
 {
     std::cout << "MateriaSource default constructor called" << std::endl;
     for (int i = 0; i < 4; i++)
-        this->copy[i] = NULL;
+        this->copy[i] = nullptr;
 }
 
 MateriaSource::~MateriaSource()
@@ -43,5 +43,5 @@ AMateria* MateriaSource::createMateria(std::string const & type)
         }
     }
     std::cout << "Materia type unknown" << std::endl;
-    return (0);
+    return (nullptr);
 }
