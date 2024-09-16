@@ -25,11 +25,13 @@ int main(void)
     for (int i = 0; i < 10; i++)
     {
         if (i % 2)
+        {
             animals[i] = new Dog();
+            //animals[i] = new Animal();
+        }
         else
             animals[i] = new Cat();
-        //animals[i]->makeSound();
-        
+        animals[i]->makeSound();
     }
     for (int i = 0; i < 10; i++)
     {
@@ -37,5 +39,5 @@ int main(void)
     }
 
     //Animal  *animal;
-    Animal  animal();
+    //Animal  animal();
 }
