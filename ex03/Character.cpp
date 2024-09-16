@@ -11,6 +11,7 @@ Character::Character(std::string name) : name(name)
     for (int i = 0; i < 4; i++)
     {
         this->slot[i] = NULL;
+        this->floor[i] = NULL;
     }
 }
 
@@ -33,6 +34,8 @@ Character::~Character()
     {
         if (this->slot[i])
             delete this->slot[i];
+        if (this->floor[i])
+            delete this->floor[i];
     }
 }
 
@@ -75,7 +78,7 @@ void Character::unequip(int idx)
     {
         if (i == idx)
         {
-            //this->floor[i] = this->slot[i];
+            this->floor[i] = this->slot[i];
             this->slot[i] = NULL;
         }
     }  
