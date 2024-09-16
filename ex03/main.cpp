@@ -8,17 +8,13 @@
 
 int main(void)
 {
-    // AMateria    *test_1 = new Ice();
-    // AMateria    *test_2 = new Cure();
-    // AMateria    *test_3 = new Ice();
-    // std::cout << test_1->getType() << std::endl;
-    // std::cout << test_2->getType() << std::endl;
-    // test_1 = test_3;
-    // std::cout << test_1->getType() << std::endl;
-
-    Ice ice_1;
-    Ice ice_2;
-    ice_1 = ice_2;
+    Character  me;
+    Character  you;
+    std::cout << me.getName() << std::endl;
+    std::cout << you.getName() << std::endl;
+    me = you;
+    std::cout << me.getName() << std::endl;
+    std::cout << you.getName() << std::endl;
 }
 
 // int main(void)

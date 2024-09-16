@@ -1,6 +1,6 @@
 #include "Character.hpp"
 
-Character::Character()
+Character::Character() : name("default")
 {
     std::cout << "Character default constructor called" << std::endl;
 }
@@ -47,9 +47,7 @@ Character&    Character::operator=(const Character& obj)
         for (int i = 0; i < 4; i++)
         {
             if (obj.slot[i])
-            {
                 this->slot[i] = obj.slot[i]->clone();
-            }
         } 
     }
     return (*this);
