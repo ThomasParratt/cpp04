@@ -21,15 +21,25 @@
 
 int main(void)
 {
-    const Animal    *animals[10];
-    for (int i = 0; i < 10; i++)
     {
-        if (i % 2)
-            animals[i] = new Dog();
-        else
-            animals[i] = new Cat();
-        animals[i]->makeSound();
+        const Animal    *animals[10];
+        for (int i = 0; i < 10; i++)
+        {
+            if (i % 2)
+                animals[i] = new Dog();
+            else
+                animals[i] = new Cat();
+            animals[i]->makeSound();
+        }
+        for (int i = 0; i < 10; i++)
+            delete animals[i];
     }
-    for (int i = 0; i < 10; i++)
-        delete animals[i];
+    std::cout << std::endl;
+    {
+        // A copy of a dog or a cat can't be shallow. How can I test this?
+        Dog basic;
+        {
+            Dog tmp = basic;
+        }
+    }
 }
