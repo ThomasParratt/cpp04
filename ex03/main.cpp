@@ -8,13 +8,14 @@
 
 int main(void)
 {
-    Character  me;
-    Character  you;
+    Character  me = Character("me");
+    Character  you = Character("you");
     std::cout << me.getName() << std::endl;
     std::cout << you.getName() << std::endl;
-    me = you;
+    Character them;
+    them = me;
     std::cout << me.getName() << std::endl;
-    std::cout << you.getName() << std::endl;
+    std::cout << them.getName() << std::endl;
 }
 
 // int main(void)
