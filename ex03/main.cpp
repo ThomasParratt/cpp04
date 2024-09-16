@@ -16,8 +16,10 @@ int main(void)
 
     AMateria* tmp;
     tmp = src->createMateria("ice");
-    me->equip(tmp);
+    std::cout << "tmp type = " << tmp->getType() << std::endl;
+    me->equip(tmp); //equip takes ownership of tmp and manages it's lifetime
     tmp = src->createMateria("cure");
+    std::cout << "tmp type = " << tmp->getType() << std::endl;
     me->equip(tmp);
 
     ICharacter* bob = new Character("bob");
