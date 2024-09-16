@@ -13,7 +13,6 @@ class   Brain
         Brain(const Brain& obj);
         virtual ~Brain();
         Brain& operator=(const Brain& obj);
-        //void            build_brain(std::string idea);
         std::string     *get_ideas();
 };
 

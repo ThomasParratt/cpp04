@@ -28,26 +28,8 @@ int main(void)
             animals[i] = new Dog();
         else
             animals[i] = new Cat();
-        //animals[i]->makeSound();
-        
+        animals[i]->makeSound();
     }
     for (int i = 0; i < 10; i++)
         delete animals[i];
 }
-
-// int main(void)
-// {
-//     const Animal* j = new Dog();
-//     const Animal* i = new Cat();
-//     delete j;//should not create a leak
-//     delete i;
-//     return (0);
-// }
-
-// int main(void)
-// {
-//     Dog basic;
-//     {
-//     Dog temp = basic;
-//     }
-// }

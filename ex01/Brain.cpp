@@ -34,12 +34,6 @@ Brain& Brain::operator=(const Brain& obj)
     return (*this);
 }
 
-// void    Brain::build_brain(std::string idea)
-// {
-//     for (int i = 0; i < 100; i++)
-//         this->ideas[i] = idea;
-// }
-
 std::string *Brain::get_ideas()
 {
     return (this->ideas);
