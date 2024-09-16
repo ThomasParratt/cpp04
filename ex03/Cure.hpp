@@ -10,8 +10,8 @@ class   Cure : public AMateria
         Cure();
         Cure(const Cure& obj);
         ~Cure();
-        //Cure&   operator=(const Cure& obj);
-        // std::string const & getType() const; //Returns the materia type
+        Cure&   operator=(const Cure& obj);
+        //std::string const & getType() const;
         Cure*   clone() const;
         void    use(ICharacter& target);
 };

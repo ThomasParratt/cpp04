@@ -10,8 +10,8 @@ class   Ice : public AMateria
         Ice();
         Ice(const Ice& obj);
         ~Ice();
-        //Ice&    operator=(const Ice& obj);
-        // std::string const & getType() const; //Returns the materia type
+        Ice&    operator=(const Ice& obj);
+        //std::string const & getType() const;
         Ice*    clone() const;
         void    use(ICharacter& target);
 };

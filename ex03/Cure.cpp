@@ -9,7 +9,7 @@ Cure::Cure()
 Cure::Cure(const Cure& obj) : AMateria(obj)
 {
     std::cout << "Cure copy constructor called" << std::endl;
-    this->type = obj.type;
+    *this = obj;
 }
 
 Cure::~Cure()
@@ -17,11 +17,13 @@ Cure::~Cure()
     std::cout << "Cure destructor called" << std::endl;
 }
 
-// Cure&    Cure::operator=(const Cure& obj)
-// {
-//     std::cout << "Cure copy assignment operator called" << std::endl;
-//     return (*this);
-// }
+Cure&    Cure::operator=(const Cure& obj)
+{
+    std::cout << "Cure copy assignment operator called" << std::endl;
+    if (this != &obj)
+        *this = obj;
+    return (*this);
+}
 
 Cure*    Cure::clone() const
 {
