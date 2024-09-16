@@ -101,8 +101,10 @@ void Character::use(int idx, ICharacter& target)
     for (int i = 0; i < 4; i++)
     {
         if (i == idx && this->slot[idx])
+        {
             this->slot[idx]->use(target);
-    }     
+        }
+    }
 }
 
 // void    Character::print_slot(int idx)
