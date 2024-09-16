@@ -20,8 +20,7 @@ Cure::~Cure()
 Cure&    Cure::operator=(const Cure& obj)
 {
     std::cout << "Cure copy assignment operator called" << std::endl;
-    if (this != &obj)
-        *this = obj;
+    if (this != &obj) {}
     return (*this);
 }
 

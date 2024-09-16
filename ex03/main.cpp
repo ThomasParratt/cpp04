@@ -8,32 +8,47 @@
 
 int main(void)
 {
-    IMateriaSource* src = new MateriaSource();
-    src->learnMateria(new Ice());
-    src->learnMateria(new Cure());
+    // AMateria    *test_1 = new Ice();
+    // AMateria    *test_2 = new Cure();
+    // AMateria    *test_3 = new Ice();
+    // std::cout << test_1->getType() << std::endl;
+    // std::cout << test_2->getType() << std::endl;
+    // test_1 = test_3;
+    // std::cout << test_1->getType() << std::endl;
 
-    ICharacter* me = new Character("me");
-
-    AMateria* tmp;
-    tmp = src->createMateria("ice");
-    me->equip(tmp);
-    tmp = src->createMateria("cure");
-    me->equip(tmp);
-
-    ICharacter* bob = new Character("bob");
-
-    me->use(0, *bob);
-    me->use(1, *bob);
-
-    me->unequip(0);
-    me->unequip(1);
-
-    delete bob;
-    delete me;
-    delete src;
-
-    return (0);
+    Ice ice_1;
+    Ice ice_2;
+    ice_1 = ice_2;
 }
+
+// int main(void)
+// {
+//     IMateriaSource* src = new MateriaSource();
+//     src->learnMateria(new Ice());
+//     src->learnMateria(new Cure());
+
+//     ICharacter* me = new Character("me");
+
+//     AMateria* tmp;
+//     tmp = src->createMateria("ice");
+//     me->equip(tmp);
+//     tmp = src->createMateria("cure");
+//     me->equip(tmp);
+
+//     ICharacter* bob = new Character("bob");
+
+//     me->use(0, *bob);
+//     me->use(1, *bob);
+
+//     me->unequip(0);
+//     me->unequip(1);
+
+//     delete bob;
+//     delete me;
+//     delete src;
+
+//     return (0);
+// }
 
 // int main(void)
 // {

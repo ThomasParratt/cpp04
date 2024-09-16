@@ -24,8 +24,7 @@ AMateria::~AMateria()
 AMateria& AMateria::operator=(const AMateria& obj)
 {
     std::cout << "AMateria copy assignment operator called" << std::endl;
-    if (this != &obj)
-        *this = obj;
+    if (this != &obj) {}
     return (*this);
 }
 

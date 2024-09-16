@@ -20,8 +20,7 @@ Ice::~Ice()
 Ice&    Ice::operator=(const Ice& obj)
 {
     std::cout << "Ice copy assignment operator called" << std::endl;
-    if (this != &obj)
-        *this = obj;;
+    if (this != &obj) {}
     return (*this);
 }
 
