@@ -62,10 +62,12 @@ std::string const & Character::getName() const
 
 void Character::equip(AMateria* m)
 {
+    std::cout << this->getName() << " equips " << m->getType() << " type Materia ";
     for (int i = 0; i < 4; i++)
     {
         if (!this->slot[i])
         {
+            std::cout << "to slot " << i << std::endl;
             this->slot[i] = m;
             break ;
         }
@@ -74,6 +76,7 @@ void Character::equip(AMateria* m)
 
 void Character::unequip(int idx)
 {
+    std::cout << this->getName() << " unequips Materia at slot " << idx << std::endl;
     for (int i = 0; i < 4; i++)
     {
         if (i == idx)
