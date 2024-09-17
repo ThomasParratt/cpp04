@@ -80,7 +80,7 @@ void Character::equip(AMateria* m)
             this->slot[i] = m;
             break ;
         }
-    }  
+    }
 }
 
 void Character::unequip(int idx)
@@ -104,11 +104,3 @@ void Character::use(int idx, ICharacter& target)
             this->slot[idx]->use(target);
     }
 }
-
-// void    Character::print_slot(int idx)
-// {
-//     if (this->slot[idx] == NULL)
-//         std::cout << "slot " << idx << " is not equiped" << std::endl;
-//     else
-//         std::cout << "slot " << idx << " is " << this->slot[idx]->getType() << std::endl;
-// }
