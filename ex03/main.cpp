@@ -1,10 +1,7 @@
-#include "AMateria.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
-#include "IMateriaSource.hpp"
 #include "MateriaSource.hpp"
 #include "Character.hpp"
-#include "ICharacter.hpp"
 
 int main(void)
 {
